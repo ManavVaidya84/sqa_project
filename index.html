@@ -208,13 +208,16 @@ let message=document.getElementById("message");
 if(username=="" || password==""){
 message.innerHTML="⚠ Fields cannot be empty";
 message.style.color="orange";
+return;
 }
 
-else if(password.length < 6){
+if(password.length < 6){
 message.innerHTML="⚠ Password must be at least 6 characters";
 message.style.color="yellow";
+return;
 }
-else if(username=="admin" && password=="cyber123"){
+
+if(username=="admin" && password=="cyber123"){
 
 message.innerHTML="✔ Access Granted";
 message.style.color="lime";
@@ -223,46 +226,17 @@ setTimeout(function(){
 window.location.href="dashboard.html";
 },1500);
 
+return;
 }
 
-else{
 message.innerHTML="✖ Invalid Credentials";
 message.style.color="red";
-}
-
 
 }
+
 
 </script>
 
 </body>
 </html>
-if(username=="" || password==""){
-message.innerHTML="⚠ Fields cannot be empty";
-message.style.color="orange";
-}
 
-else if(password.length < 6){
-message.innerHTML="⚠ Password must be at least 6 characters";
-message.style.color="yellow";
-}
-
-else if(username=="admin" && password=="cyber123"){
-message.innerHTML="✔ Access Granted";
-message.style.color="lime";
-}
-
-else{
-message.innerHTML="✖ Invalid Credentials";
-message.style.color="red";
-}
-setTimeout(function(){
-window.location.href="dashboard.html";
-});
-
-}
-
-</script>
-
-</body>
-</html>
