@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Cyber Security Dashboard</title>
+
+<style>
+
+body{
+margin:0;
+background:black;
+font-family:Consolas,monospace;
+color:#00ff9f;
+}
+
+/* HEADER */
+
+.header{
+
+background:#000;
+padding:20px;
+
+border-bottom:1px solid #00ff9f;
+
+box-shadow:0 0 10px #00ff9f;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+.title{
+font-size:22px;
+}
+
+/* DASHBOARD GRID */
+
+.dashboard{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+
+padding:40px;
+
+}
+
+/* CARDS */
+
+.card{
+
+background:#000;
+border:1px solid #00ff9f;
+
+padding:25px;
+
+text-align:center;
+
+box-shadow:0 0 10px #00ff9f;
+
+transition:0.3s;
+
+}
+
+.card:hover{
+
+box-shadow:
+0 0 20px #00ff9f,
+0 0 40px #00ff9f;
+
+transform:scale(1.05);
+
+}
+
+.logout{
+
+background:#00ff9f;
+border:none;
+padding:10px 15px;
+cursor:pointer;
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="title">CYBER SECURITY DASHBOARD</div>
+
+<button class="logout" onclick="logout()">Logout</button>
+
+</div>
+
+
+<div class="dashboard">
+
+<div class="card">
+<h3>Threat Monitor</h3>
+<p>System threats detection active</p>
+</div>
+
+<div class="card">
+<h3>Firewall Status</h3>
+<p>Firewall running normally</p>
+</div>
+
+<div class="card">
+<h3>Network Activity</h3>
+<p>Monitoring network traffic</p>
+</div>
+
+<div class="card">
+<h3>Intrusion Detection</h3>
+<p>No intrusions detected</p>
+</div>
+
+<div class="card">
+<h3>System Logs</h3>
+<p>Logs updated in real time</p>
+</div>
+
+<div class="card">
+<h3>User Sessions</h3>
+<p>1 Active session</p>
+</div>
+
+</div>
+
+
+<script>
+
+function logout(){
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+</body>
+</html>
